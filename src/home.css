@@ -1,0 +1,69 @@
+
+
+
+/* ==========================================
+   HOME
+========================================== */
+
+.home {
+  position: relative;
+
+  width: 100%;
+  height: 100vh;
+}
+
+
+.video-stage {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 1;
+
+  width: 100vw;
+  height: 100vh;
+
+  overflow: hidden;
+
+  background: #000000;
+
+  opacity: 0;
+
+  transition: opacity 1s ease;
+}
+
+
+body.experience-ready .video-stage {
+  opacity: 1;
+}
+
+
+#makeupVideo {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+
+/* DARK LAYER OVER VIDEO */
+
+.video-stage::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.4),
+      transparent 50%,
+      rgba(0, 0, 0, 0.1)
+    );
+
+  pointer-events: none;
+}

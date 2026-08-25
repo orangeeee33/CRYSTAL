@@ -1,0 +1,123 @@
+
+/* ==========================================
+   VIDEO SCROLL SPACE
+========================================== */
+
+.video-scroll-space {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+  height: 600vh;
+
+  pointer-events: none;
+}
+
+
+/* ==========================================
+   GENERAL CONTENT SECTIONS
+========================================== */
+
+.content-section {
+  position: relative;
+
+  z-index: 20;
+
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 140px 8%;
+
+  background: #f4eee9;
+  color: #17110f;
+}
+
+
+.section-small {
+  margin-bottom: 30px;
+
+  font-size: 11px;
+
+  letter-spacing: 4px;
+}
+
+
+.content-section h2 {
+  max-width: 900px;
+
+  margin-bottom: 45px;
+
+  font-size:
+    clamp(
+      48px,
+      7vw,
+      100px
+    );
+
+  font-weight: 400;
+  line-height: 0.95;
+
+  letter-spacing: -4px;
+}
+
+
+.section-description {
+  max-width: 650px;
+
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+
+/* ==========================================
+   PRODUCT MARQUEE
+========================================== */
+
+.product-marquee {
+  position: relative;
+  z-index: 20;
+
+  width: 100%;
+  overflow: hidden;
+
+  padding: 0px 0;
+
+  background: #c8b8ff;
+  color: #17110f;
+}
+
+.product-marquee-track {
+  width: max-content;
+
+  display: flex;
+
+  animation: productMarquee 22s linear infinite;
+}
+
+.product-marquee-group {
+  display: flex;
+  align-items: center;
+
+  gap: 35px;
+  padding-right: 35px;
+
+  white-space: nowrap;
+}
+
+.product-marquee-group span {
+  font-size: 13px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+@keyframes productMarquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}

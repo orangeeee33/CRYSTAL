@@ -1,0 +1,437 @@
+
+@media (max-width: 768px) {
+ #eyeMarker {
+  width: 50px ;
+  height: 50px ;
+  top: 30%;
+  left: 58%;
+  transform: translate(-50%,-50%);
+ }
+  .eye-looks-section {
+    padding:
+      5px
+      10px
+      60px ;
+
+    background:
+      linear-gradient(
+        135deg,
+        #c9987f 0%,
+        #a56f61 50%,
+        #6d4a4c 100%
+      ) ;
+
+    color:
+      #fff8f2 ;
+  }
+
+
+  .eye-looks-section
+  .eye-looks-heading
+  h2 {
+    color:
+      #fff8f2 ;
+  }
+
+
+  .eye-looks-section
+  .eye-looks-heading
+  .section-small {
+    color:
+      #f2d0bd ;
+  }
+
+
+  .eye-looks-section
+  .section-description {
+    color:
+      #f5e0d5 ;
+  }
+
+
+  /* GALLERY */
+
+  .eye-gallery {
+    width:
+      100% ;
+
+    height:
+      520px ;
+
+    display:
+      flex ;
+
+    flex-direction:
+      row ;
+
+    gap:
+      7px ;
+
+    overflow:
+      hidden ;
+  }
+
+
+  /* CARDS */
+
+  .eye-card {
+    flex:
+      1 1 0 ;
+
+    width:
+      auto ;
+
+    min-width:
+      0 ;
+
+    height:
+      520px ;
+
+    transform:
+      none ;
+
+    border-radius:
+      13px ;
+  }
+
+
+  /* FIRST CARD OPEN */
+
+  .eye-gallery:not(:hover)
+  .eye-card:first-child {
+    flex:
+      4 1 0 ;
+  }
+
+
+  /* OPEN CARD ON TOUCH */
+
+  .eye-card:hover,
+  .eye-card:active {
+    flex:
+      4 1 0 ;
+
+    transform:
+      none ;
+  }
+
+
+  /* IMAGES */
+
+  .eye-card img {
+    width:
+      100% ;
+
+    height:
+      100% ;
+
+    object-fit:
+      cover ;
+
+    object-position:
+      center ;
+  }
+
+
+  /* CARD TEXT */
+
+  .eye-card-content {
+    left:
+      18px ;
+
+    right:
+      18px ;
+
+    bottom:
+      22px ;
+
+    opacity:
+      0;
+
+    transform:
+      translateY(
+        15px
+      );
+  }
+
+
+  .eye-gallery:not(:hover)
+  .eye-card:first-child
+  .eye-card-content,
+  .eye-card:hover
+  .eye-card-content,
+  .eye-card:active
+  .eye-card-content {
+    opacity:
+      1 ;
+
+    transform:
+      translateY(
+        0
+      ) ;
+  }
+
+
+  .eye-card-content h3 {
+    font-size:
+      clamp(24px ,3vw,34px) ;
+    line-height: 1.05 ;
+    white-space:
+      normal ;
+  }
+
+
+  .eye-card-content p {
+    font-size:
+      11px ;
+
+    line-height:
+      1.4 ;
+  }
+
+  /* MOBILE NAVBAR */
+
+.navbar {
+  width: 100%;
+
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 6px;
+
+  padding:
+    18px
+    12px;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(5, 4, 10, 0.75),
+      transparent
+    );
+}
+
+.logo {
+  flex-shrink: 0;
+  font-size: 14px;
+
+  letter-spacing: 2px;
+
+  white-space: nowrap;
+}
+
+
+.navbar nav {
+  width: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content:flex-end;
+
+  gap: 9px;
+}
+
+
+.navbar nav a {
+  flex-shrink: 0;
+
+  font-size: 8px;
+
+  letter-spacing: 0;
+
+  white-space: nowrap;
+}
+.product-card img {
+  height: 350px;
+}
+
+  .products-section {
+ 
+    padding:
+      45px
+      18px
+      30px;
+  }
+
+
+  .products-heading h2 {
+    font-size: 43px;
+
+    letter-spacing: -2px;
+  }
+
+
+  .products-heading > span {
+    margin-top: 16px;
+
+    font-size: 12px;
+  }
+
+  
+
+
+  .products-grid {
+    gap: 16px;
+  }
+
+
+  .product-card {
+    flex: 0 0 100%;
+
+    padding:
+      8px
+      8px
+      16px;
+  }
+
+
+  .product-card h3 {
+    font-size: 20px;
+  }
+
+
+  .product-arrow {
+    width: 40px;
+    height: 40px;
+
+    font-size: 27px;
+  }
+
+
+  .product-arrow-left {
+    left: 10px;
+  }
+
+
+  .product-arrow-right {
+    right: 10px;
+  }
+
+
+  .cart-button {
+    right: 15px;
+    bottom: 15px;
+
+    padding:
+      12px
+      15px;
+  }
+
+
+  .cart-panel {
+    width: 100%;
+
+    padding:
+      25px
+      18px;
+  }
+
+
+  .about-section {
+    min-height: 100svh;
+
+    align-items: flex-end;
+
+    padding:
+      120px
+      25px
+      70px;
+
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(2, 6, 15, 0.08) 0%,
+        rgba(2, 6, 15, 0.35) 38%,
+        rgba(2, 6, 15, 0.97) 75%
+      ),
+      url("/about.png");
+
+    background-size: cover;
+    background-position: 68% center;
+  }
+
+
+  .about-section h2 {
+    margin-bottom: 22px;
+
+    font-size: 52px;
+    line-height: 0.92;
+    letter-spacing: -2px;
+  }
+
+
+  .about-section .section-description {
+    margin-bottom: 30px;
+
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+
+  .about-link {
+    font-size: 10px;
+  }
+  
+
+/* ==========================================
+   CONTACT 
+========================================== */
+
+
+
+
+  .contact-section {
+ 
+
+    padding:
+      90px
+      22px
+      45px;
+  }
+
+
+  .contact-heading {
+    margin-bottom: 35px;
+  }
+
+
+  .contact-container {
+    gap: 35px;
+  }
+
+
+  .contact-form {
+    gap: 18px;
+  }
+
+
+  .form-group textarea {
+    min-height: 95px;
+  }
+
+
+  .contact-submit {
+    margin-top: 5px;
+
+    padding: 15px 25px;
+  }
+
+
+  .contact-details {
+    padding: 0;
+
+    border: none;
+  }
+
+
+  .contact-socials {
+    margin-top: 0;
+
+    justify-content: flex-start;
+  }
+
+}
+
+
+

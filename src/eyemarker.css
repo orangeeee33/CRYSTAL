@@ -1,0 +1,72 @@
+.eye-marker {
+  position: absolute;
+
+  top: 38%;
+  left: 55%;
+
+  z-index: 10;
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  transform:
+    translate(
+      -50%,
+      -50%
+    );
+
+  transition: opacity 0.3s ease;
+}
+
+
+.eye-marker.show {
+  opacity: 1;
+}
+
+
+.eye-box {
+  position: relative;
+ 
+  width: 150px;
+  height: 150px;
+
+  border: 2px solid #ffffff;
+}
+
+
+.eye-box::before,
+.eye-box::after {
+  content: "";
+
+  position: absolute;
+
+  width: 12px;
+  height: 12px;
+
+  background: #ffffff;
+}
+
+
+.eye-box::before {
+  top: -6px;
+  left: -6px;
+}
+
+
+.eye-box::after {
+  right: -6px;
+  bottom: -6px;
+}
+
+
+.eye-marker span {
+  display: block;
+
+  margin-top: 10px;
+
+  font-size: 10px;
+
+  letter-spacing: 3px;
+}
+

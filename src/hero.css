@@ -1,0 +1,50 @@
+/* ==========================================
+   HERO TEXT hjm l kitebe
+========================================== */
+
+.hero-text {
+  position: absolute;
+
+  left: 7%;
+  bottom: 12%;
+
+  z-index: 5;
+
+  max-width: 600px;
+}
+
+
+.hero-text p {
+  margin-bottom: 15px;
+
+  font-size: 12px;
+
+  letter-spacing: 4px;
+}
+
+
+.hero-text h1 {
+  margin-bottom: 25px;
+
+  font-size:
+    clamp(
+      50px,
+      7vw,
+      100px
+    );
+
+  font-weight: 400;
+  line-height: 0.9;
+
+  letter-spacing: -4px;
+}
+
+
+.hero-text span {
+  font-size: 13px;
+
+  letter-spacing: 2px;
+
+  opacity: 0.8;
+}
+
