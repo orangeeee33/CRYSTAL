@@ -67,15 +67,54 @@ function setupVideoScroll() {
   let targetTime = 0;
   let smoothTime = 0;
 
+  // UNLOCK VIDEO ON IPHONE
+
+function unlockVideo() {
+
+  const playPromise =
+    makeupVideo.play();
+
+
+  if (playPromise) {
+
+    playPromise
+      .then(() => {
+
+        makeupVideo.pause();
+
+        makeupVideo.currentTime =
+          0.01;
+
+      })
+      .catch(() => {
+
+        // Safari may block autoplay
+        // until the first user touch.
+
+      });
+
+  }
+
+}
+
+
+document.addEventListener(
+  "touchstart",
+  unlockVideo,
+  {
+    once: true,
+    passive: true
+  }
+);
 
   function createScroll() {
 
     const duration = makeupVideo.duration;
 
-    const lastSafeFrame = duration;
+    const lastSafeFrame = Math.max(duration- 0.05,0);
 
     makeupVideo.pause();
-    makeupVideo.currentTime = 0;
+    makeupVideo.currentTime = 0.01;
 
 
     // مكان العين
@@ -204,11 +243,19 @@ function setupVideoScroll() {
 
 
       if (
-        Math.abs(
-          makeupVideo.currentTime -
-          smoothTime
-        ) > 0.016
-      ) {
+    
+  makeupVideo.readyState >= 2 &&
+  Math.abs(
+    makeupVideo.currentTime -
+    smoothTime
+  ) > 0.04
+) {
+
+  makeupVideo.currentTime =
+    smoothTime;
+
+}
+       {
 
         makeupVideo.currentTime =
           smoothTime;
@@ -230,24 +277,26 @@ function setupVideoScroll() {
   }
 
 
-  // إذا الفيديو جاهز
+  // WAIT UNTIL THE FIRST VIDEO FRAME IS READY
 
-  if (
-    makeupVideo.readyState >= 1
-  ) {
+if (
+  makeupVideo.readyState >= 2
+) {
 
-    createScroll();
+  createScroll();
 
-  } else {
+} else {
 
-    makeupVideo.addEventListener(
-      "loadedmetadata",
-      createScroll,
-      {
-        once: true
-      }
-    );
+  makeupVideo.addEventListener(
+    "loadeddata",
+    createScroll,
+    {
+      once: true
+    }
+  );
 
-  }
 
+  makeupVideo.load();
+
+}
 }
